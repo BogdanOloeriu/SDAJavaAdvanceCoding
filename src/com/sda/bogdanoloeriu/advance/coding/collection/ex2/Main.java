@@ -24,15 +24,11 @@ public class Main {
 
     }
 
-
-    public static List<String> orderCaseList(List<String> inputList){
+    public static List<String> orderCaseList(List<String> inputList) {
 
         return inputList.stream()
-                .sorted((o1,o2) ->o2.compareToIgnoreCase(o1))
+                .sorted((o1, o2) -> o2.compareToIgnoreCase(o1))
                 .collect(Collectors.toList());
 
     }
-
-
-
 }
