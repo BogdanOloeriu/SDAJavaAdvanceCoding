@@ -144,4 +144,12 @@ public class CarService {
                 .collect(Collectors.toList());
     }
 
+    public List<String> getAllModels(){
+        return cars.stream()
+                .map(car -> car.getModel()) //am un stream de modele aici.
+                .distinct() //reduce toate duplicatele
+                .collect(Collectors.toList());
+
+    }
+
 }
