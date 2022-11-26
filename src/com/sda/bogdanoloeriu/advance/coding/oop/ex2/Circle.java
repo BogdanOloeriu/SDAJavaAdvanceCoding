@@ -13,7 +13,7 @@ package com.sda.bogdanoloeriu.advance.coding.oop.ex2;
  * * Validate the resizing by calling the other Circle methods.
  */
 
-public class Circle implements Movable, Resizable {
+public class Circle implements Shape {
 
     private Point2D center;
     private Point2D point;
@@ -36,13 +36,15 @@ public class Circle implements Movable, Resizable {
 
     public double getRadius() {
 
-        return Math.sqrt(Math.pow(point.getY() - center.getY(), 2) + Math.pow(point.getX() - center.getX(), 2));
+        return center.getDistanceFrom(point);
     }
 
+    @Override
     public double getPerimeter() {
         return 2 * getRadius() * Math.PI;
     }
 
+    @Override
     public double getArea() {
         return Math.PI * Math.pow(getRadius(), 2);
     }

@@ -28,6 +28,10 @@ public class Point2D implements Movable{
         this.y = this.y + moveDirection.getY();
     }
 
+    public double getDistanceFrom(Point2D anotherPoint){
+        return Math.sqrt(Math.pow(anotherPoint.y - this.y, 2) + Math.pow(anotherPoint.x - this.x, 2));
+    }
+
     public double getX() {
         return x;
     }

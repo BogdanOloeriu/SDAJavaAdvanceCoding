@@ -1,12 +1,15 @@
 package com.sda.bogdanoloeriu.advance.coding.oop.ex2;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Create a MoveDirection class with fields double x, double y as well as getters, setters and constructor.
  * Create a Movable interface with the move(MoveDirection moveDirection) method.
  * Implement the interface in the classes from the previous task (Point2D and Circle).
  * When the move(MoveDirection moveDirection) method is called, the objects are to change their position based on the provided direction (MoveDirection).
  * Validate the offset by calling the other Circle methods.
- *
+ * <p>
  * Create a Resizable interface with the resize(double resizeFactor) method.
  * Implement the interface in the class from the previous task (Circle). When calling the resize(double resizeFactor) method,
  * the circle should change its size by a given factor (1.5, 0.5, 10.0, etc.).
@@ -43,6 +46,31 @@ public class Main {
         System.out.println("Radius is: " + circle.getRadius());
         System.out.println("Area is: " + circle.getArea());
         System.out.println("Perimeter is: " + circle.getPerimeter());
+
+        Point2D x = new Point2D(3, 3);
+        Point2D y = new Point2D(1, 2);
+        Point2D z = new Point2D(5, 4);
+        Point2D k = new Point2D(1, 6);
+
+        List<Shape> shapeList = new ArrayList<>();
+        Rectangle rectangle = new Rectangle(x, y, z, k);
+
+        System.out.println("--------------------");
+        System.out.println("Area is: " + rectangle.getArea());
+        System.out.println("Perimeter is: " + rectangle.getPerimeter());
+
+        shapeList.add(rectangle);
+        shapeList.add(circle);
+
+        shapeList.stream()
+                .forEach(shape -> shape.move(new MoveDirection(2, 3))); //final operation
+
+        shapeList.stream()
+                .forEach(shape -> {
+                    System.out.println(shape.getArea());
+                    System.out.println("------------");
+                    System.out.println(shape.getPerimeter());
+                });
 
     }
 }
