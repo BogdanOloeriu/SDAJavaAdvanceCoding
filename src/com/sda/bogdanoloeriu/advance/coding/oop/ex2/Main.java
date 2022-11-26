@@ -1,5 +1,13 @@
 package com.sda.bogdanoloeriu.advance.coding.oop.ex2;
 
+/**
+ * Create a MoveDirection class with fields double x, double y as well as getters, setters and constructor.
+ * Create a Movable interface with the move(MoveDirection moveDirection) method.
+ * Implement the interface in the classes from the previous task (Point2D and Circle).
+ * When the move(MoveDirection moveDirection) method is called, the objects are to change their position based on the provided direction (MoveDirection).
+ * Validate the offset by calling the other Circle methods.
+ */
+
 public class Main {
 
     public static void main(String[] args) {
@@ -12,6 +20,19 @@ public class Main {
         System.out.println("Radius is: " + circle.getRadius());
         System.out.println("Area is: " + circle.getArea());
         System.out.println("Perimeter is: " + circle.getPerimeter());
+
+        circle.move(new MoveDirection(2,3));
+
+        System.out.println("Radius is: " + circle.getRadius());
+        System.out.println("Area is: " + circle.getArea());
+        System.out.println("Perimeter is: " + circle.getPerimeter());
+
+        System.out.println("--------------------");
+        point1.move(new MoveDirection(3,5));
+        System.out.println("Radius is: " + circle.getRadius());
+        System.out.println("Area is: " + circle.getArea());
+        System.out.println("Perimeter is: " + circle.getPerimeter());
+
 
 
     }

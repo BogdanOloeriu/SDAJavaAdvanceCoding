@@ -7,9 +7,10 @@ package com.sda.bogdanoloeriu.advance.coding.oop.ex2;
  * * • circle radius when calling double getRadius() method
  * * • circle circumference when calling double getPerimeter() method
  * * • circle area when calling double getArea() method
+ *
  */
 
-public class Circle {
+public class Circle implements Movable {
 
     private Point2D center;
     private Point2D point;
@@ -17,6 +18,12 @@ public class Circle {
     public Circle(Point2D center, Point2D point) {
         this.center = center;
         this.point = point;
+    }
+
+    @Override
+    public void move(MoveDirection moveDirection) {
+        center.move(moveDirection);
+        point.move(moveDirection);
     }
 
     public double getRadius() {
