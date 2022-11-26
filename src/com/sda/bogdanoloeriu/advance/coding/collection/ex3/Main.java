@@ -32,7 +32,7 @@ public class Main {
 
     public static void printMapContent(Map<String, Integer> inputMapContent) {
 
-        Set<Map.Entry<String, Integer>> entries = inputMapContent.entrySet();
+        Set<Map.Entry<String, Integer>> entries = inputMapContent.entrySet(); // returneaza un set key-value,dar setul nu are index
         for (Map.Entry<String, Integer> el : entries) {
             System.out.println("Key " + el.getKey() + " , Value: " + el.getValue());
         }
