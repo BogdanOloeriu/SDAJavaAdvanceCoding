@@ -47,10 +47,10 @@ public class Main {
         System.out.println("Area is: " + circle.getArea());
         System.out.println("Perimeter is: " + circle.getPerimeter());
 
-        Point2D x = new Point2D(3, 3);
-        Point2D y = new Point2D(1, 2);
-        Point2D z = new Point2D(5, 4);
-        Point2D k = new Point2D(1, 6);
+        Point2D x =new Point2D(3,3);
+        Point2D y =new Point2D(3,6);
+        Point2D k =new Point2D(9,3);
+        Point2D z =new Point2D(9,6);
 
         List<Shape> shapeList = new ArrayList<>();
         Rectangle rectangle = new Rectangle(x, y, z, k);
